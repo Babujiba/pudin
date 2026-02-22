@@ -421,6 +421,34 @@ Code
                 }
 
                 // Настройка специфических списков опций для услуг
+                    if (sid === 'moment') {
+                    if (group.id === 'shooting_time') {
+                        options = [
+                            { label: 'Стандарт', percent: 0 },
+                            { label: '+1 час', percent: 0.15 },
+                            { label: '+2 часа', percent: 0.25 },
+                            { label: '+3 часа', percent: 0.35 },
+                            { label: '+4 часа', percent: 0.45 },
+                            { label: '+5 часов', percent: 0.55 },
+                            { label: '+Более 6 часов', percent: 0.75 },
+                        ];
+                    }
+                    if (group.id === 'duration') {
+                        options = [
+                            { label: 'СТАНДАРТ', percent: 0 },
+                            { label: '+1 МИНУТА', percent: 0.10 },
+                            { label: '+2 МИНУТЫ', percent: 0.20 },
+                            { label: '+3 МИНУТЫ', percent: 0.30 },
+                            { label: '+4 МИНУТЫ', percent: 0.40 },
+                            { label: '+5 МИНУТ', percent: 0.50 },
+                            { label: '+6 МИНУТ', percent: 0.60 },
+                            { label: '+7 МИНУТ', percent: 0.70 },
+                            { label: '+8 МИНУТ', percent: 0.80 },
+                            { label: '+9 МИНУТ', percent: 0.90 },
+                            { label: '+10 МИНУТ', percent: 1.00 },
+                        ];
+                    }
+                }
                 if (sid === 'memory') {
                     if (group.id === 'people') options = [
                         { label: 'Стандарт', percent: 0 },

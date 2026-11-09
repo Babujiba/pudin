@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PUDiN — видео, анимация и музыка</title>
+  <meta name="description" content="Виталий Пудин, PUDiN: музыка, видео и анимация из одних рук. Песни и запись вокала, съёмка и монтаж, анимация для бизнеса.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Unbounded:wght@500;600;700&family=Golos+Text:wght@400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap&text=%E3%82%A2%E3%82%A3%E3%83%87%E3%83%8B%E3%83%93%E3%83%95%E3%83%97%E3%83%A1%E3%83%A5%E3%83%AB%E3%83%AC%E3%83%AD%E3%83%B3%E3%83%BB%E3%83%BC%E4%BD%9C%E5%83%8F%E5%93%81%E6%98%A0%E6%A5%BD%E9%9F%B3" rel="stylesheet">
+  <link rel="stylesheet" href="pudin.css?v=17">
+</head>
+<body class="is-loading">
+
+  <!-- Интро: красная точка → логотип -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-mark">
+      <span class="lm-dot"></span>
+      <span class="lm-word">PUD<span class="lm-i">ı</span>N</span>
+    </div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Навигация -->
+  <header class="nav" id="nav">
+    <div class="nav-left">
+      <a class="nav-logo" href="#top" aria-label="PUDiN — наверх">
+        <span class="logo-word">PUD<span class="logo-i">ı<i></i></span>N</span>
+      </a>
+      <nav class="nav-links" aria-label="Разделы">
+        <a href="#works"><span>Работы</span></a>
+        <a href="#about"><span>Обо мне</span></a>
+        <a href="#reviews"><span>Отзывы</span></a>
+        <a href="#contact"><span>Связь</span></a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <a class="nav-icon" href="https://wa.me/message/Z5HW2YEI3LFNE1" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+      <a class="nav-icon vk" href="https://vk.ru/pudinmedia" target="_blank" rel="noopener" aria-label="VK">VK</a>
+      <a class="nav-icon" href="https://t.me/PUDiN_media" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1-1 .2-1.5L20.6 2.7c.9-.3 1.6.2 1.3 1.6Z"/></svg></a>
+      <a class="nav-cta" href="https://t.me/PUDiN_media" target="_blank" rel="noopener">Связаться</a>
+      <button class="nav-burger" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+    </div>
+    <div class="nav-drawer">
+      <a href="#works">Работы</a>
+      <a href="#about">Обо мне</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contact">Связь</a>
+    </div>
+  </header>
+
+  <!-- Работа во весь экран -->
+  <div class="case-modal" role="dialog" aria-modal="true" aria-label="Работа" data-lenis-prevent>
+    <div class="cm-bg"></div>
+    <div class="cm-panel">
+      <div class="cm-hud">
+        <span></span>
+        <div class="cm-actions">
+          <button class="cm-copy" type="button">Скопировать ссылку</button>
+          <button class="cm-close" type="button" aria-label="Закрыть">✕</button>
+        </div>
+      </div>
+      <div class="cm-stage"><div class="cm-player"></div></div>
+      <div class="cm-body">
+        <div class="cm-main">
+          <h2 class="cm-title"></h2>
+          <p class="cm-task"></p>
+        </div>
+      </div>
+      <div class="cm-nav">
+        <button class="cm-prev" type="button"><b>←</b> Предыдущая</button>
+        <a class="cm-ask" href="https://t.me/PUDiN_media" target="_blank" rel="noopener">Хочу так же</a>
+        <button class="cm-next" type="button">Следующая <b>→</b></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Линейка прокрутки справа -->
+  <div class="ruler" aria-hidden="true">
+    <div class="ruler-tape"></div>
+    <div class="ruler-mark"><span class="ruler-pct">000%</span></div>
+  </div>
+
+  <!-- Указатель секций -->
+  <div class="sx" aria-hidden="true">
+    <ol class="sx-top"></ol>
+    <ol class="sx-bottom"></ol>
+  </div>
+  <div class="vlabel" aria-hidden="true"><span>PUDiN</span></div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" data-section="PUDiN" data-brand>
+      <div class="hero-grid">
+        <aside class="hero-strip" aria-hidden="true">
+          <span class="hs-code">PD—01</span>
+          <span class="hs-jp">プディン・メディア</span>
+          <span class="hs-chev"><i></i><i></i><i></i></span>
+          <span class="hs-x"></span>
+          <span class="hs-bar barcode"></span>
+        </aside>
+
+        <div class="hero-main">
+          <div class="hero-lines" aria-hidden="true"></div>
+          <p class="hero-k" data-reveal><span class="led"></span>PUDiN Media · Невельск · 2026</p>
+          <h2 class="wordmark" aria-label="PUDiN">
+            <span class="ch">P</span><span class="ch">U</span><span class="ch">D</span><span class="ch ch-i"><span class="ch-stem">ı</span><i class="ch-dot"></i></span><span class="ch">N</span>
+          </h2>
+          <h1 class="hero-title" data-reveal>Видео, музыка <em>и анимация</em><b class="dot">.</b></h1>
+          <p class="hero-sub" data-reveal>Снимаю, записываю, свожу и анимирую. <br>Довожу проект от идеи до финала.</p>
+          <div class="hero-btns" data-reveal>
+            <a class="btn btn-red" href="https://t.me/PUDiN_media" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1-1 .2-1.5L20.6 2.7c.9-.3 1.6.2 1.3 1.6Z"/></svg>
+              Telegram
+            </a>
+            <a class="btn btn-line" href="#works">Смотреть работы</a>
+          </div>
+          <ul class="hero-meta" data-reveal>
+            <li>Съёмка</li><li>Монтаж</li><li>Анимация</li><li>Музыка</li>
+          </ul>
+        </div>
+
+        <div class="hero-deck" aria-hidden="true">
+          <div class="deck-top"><span>Side A · 33⅓ BPM</span><b>Play</b></div>
+          <div class="deck">
+            <div class="ticks-ring"></div>
+            <div class="record">
+              <div class="record-label"><b>PUD<span class="logo-i">ı<i></i></span>N</b><small>Видео · Звук</small></div>
+            </div>
+            <div class="tonearm"><i></i></div>
+          </div>
+          <div class="deck-spec">
+            <dl>
+              <div><dt>Бренд</dt><dd class="dd-brand">PUDiN</dd></div>
+              <div><dt>Режим</dt><dd>Chill</dd></div>
+              <div><dt>Номер</dt><dd>53752857</dd></div>
+            </dl>
+            <svg class="deck-graph" viewBox="0 0 120 72">
+              <line x1="10" y1="62" x2="112" y2="62"/><line x1="10" y1="8" x2="10" y2="62"/>
+              <path d="M10 60 C 40 58, 52 46, 62 34 S 92 12, 112 10"/>
+              <circle cx="62" cy="34" r="3.5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="hero-foot" aria-hidden="true">
+        <span class="hazard"></span>
+        <span>N 46°40′ · E 141°51′</span>
+        <span class="sp"></span>
+        <span class="hide-m">Видео · Анимация · Музыка</span>
+        <span class="chev">▶▶▶</span>
+      </div>
+    </section>
+
+    <!-- Бегущая строка -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <ul>
+          <li><i></i>Музыка</li><li><i></i>Песни</li><li><i></i>Запись вокала</li><li><i></i>Сведение</li><li><i></i>Видео</li><li><i></i>Съёмка</li><li><i></i>Монтаж</li><li><i></i>Клипы</li><li><i></i>Видео из архива</li><li><i></i>Анимация</li><li><i></i>Заставки</li><li><i></i>Моушн</li><li><i></i>PUDiN</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 01 РАБОТЫ -->
+    <section class="sec" id="works" data-section="Работы">
+      <span class="rule" aria-hidden="true"></span>
+      <div class="frame">
+        <span class="tick tick-l" aria-hidden="true"></span><span class="tick tick-r" aria-hidden="true"></span>
+        <div class="eyebrow"><p data-jp="作品">01 / Работы</p><p class="eyebrow-r">Музыка · Видео · Анимация</p></div>
+        <div class="sec-head">
+          <h2 data-reveal>Музыка, видео <em>и анимация</em><b class="dot">.</b></h2>
+          <p data-reveal>Три направления, в которых я работаю. Нажмите на работу — она откроется на весь экран.</p>
+        </div>
+        <div class="showcase">
+          <article class="show" id="works-music" data-kind="music" data-reveal>
+            <aside class="show-strip" aria-hidden="true"><span class="ss-code">MU—01</span><span class="ss-jp">音楽</span><span class="ss-chev">▼▼▼</span><span class="barcode"></span></aside>
+            <header class="show-head">
+              <span class="show-n" aria-hidden="true">01</span>
+              <p class="show-k">Музыка</p>
+              <h3>Песни и клипы<b class="dot">.</b></h3>
+              <p class="show-p">Записываю песни, снимаю к ним клипы и постановки — например, поздравления выпускникам от родителей.</p>
+              <ul class="show-tags"><li>Запись песен</li><li>Клипы</li><li>Постановки</li></ul>
+            </header>
+            <div class="show-works" data-works="music"></div>
+          </article>
+          <article class="show" id="works-video" data-kind="video" data-reveal>
+            <aside class="show-strip" aria-hidden="true"><span class="ss-code">VD—02</span><span class="ss-jp">映像</span><span class="ss-chev">▼▼▼</span><span class="barcode"></span></aside>
+            <header class="show-head">
+              <span class="show-n" aria-hidden="true">02</span>
+              <p class="show-k">Видео</p>
+              <h3>Монтаж<b class="dot">.</b></h3>
+              <p class="show-p">Монтирую документальные ролики об истории компаний для англоязычного YouTube.</p>
+              <ul class="show-tags"><li>Монтаж</li><li>История компаний</li><li>YouTube</li></ul>
+            </header>
+            <div class="show-works" data-works="video"></div>
+          </article>
+          <article class="show" id="works-animation" data-kind="anim" data-reveal>
+            <aside class="show-strip" aria-hidden="true"><span class="ss-code">AN—03</span><span class="ss-jp">アニメ</span><span class="ss-chev">▼▼▼</span><span class="barcode"></span></aside>
+            <header class="show-head">
+              <span class="show-n" aria-hidden="true">03</span>
+              <p class="show-k">Анимация</p>
+              <h3>Анимация<b class="dot">.</b></h3>
+              <p class="show-p">Рекламные мультфильмы и моушн-дизайн для бизнеса: от сервиса открыток до SaaS и языковой школы.</p>
+              <ul class="show-tags"><li>Мультфильмы</li><li>Моушн-дизайн</li><li>Реклама</li></ul>
+            </header>
+            <div class="show-works" data-works="animation"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <script src="cases.js?v=17"></script>
+
+    <!-- 02 ОБО МНЕ -->
+    <section class="sec" id="about" data-section="Обо мне">
+      <span class="rule" aria-hidden="true"></span>
+      <div class="frame">
+        <span class="tick tick-l" aria-hidden="true"></span><span class="tick tick-r" aria-hidden="true"></span>
+        <div class="eyebrow"><p data-jp="プロフィール">02 / Обо мне</p><p class="eyebrow-r">Невельск</p></div>
+        <div class="sec-head">
+          <h2 data-reveal>Привет, я <em>Виталий</em><b class="dot">.</b></h2>
+          <p data-reveal>Звукорежиссёр и видеограф. Снимаю, записываю, монтирую и выстраиваю финальный образ проекта — довожу материал до результата, который можно уверенно показать зрителю и заказчику.</p>
+        </div>
+        <div class="portrait" data-reveal>
+          <img src="img/herop0.webp" alt="Виталий Пудин" loading="lazy">
+          <span class="corner c-tl"></span><span class="corner c-tr"></span><span class="corner c-bl"></span><span class="corner c-br"></span>
+          <span class="portrait-hud">REC <i></i> PUDiN · Невельск</span>
+        </div>
+        <div class="grid grid-3" data-reveal-group>
+          <article class="tile" data-reveal>
+            <p class="tile-k">A</p>
+            <h3>Музыка</h3>
+            <p>Пишу песни, записываю и свожу вокал — от минусовки до готового трека.</p>
+          </article>
+          <article class="tile" data-reveal>
+            <p class="tile-k">B</p>
+            <h3>Видео</h3>
+            <p>Снимаю и монтирую: праздники, клипы, фильмы из семейного архива и рекламу.</p>
+          </article>
+          <article class="tile" data-reveal>
+            <p class="tile-k">C</p>
+            <h3>Анимация</h3>
+            <p>Плоская векторная анимация для бизнеса: ролики, заставки, меню для экранов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 ОТЗЫВЫ -->
+    <section class="sec" id="reviews" data-section="Отзывы">
+      <span class="rule" aria-hidden="true"></span>
+      <div class="frame">
+        <span class="tick tick-l" aria-hidden="true"></span><span class="tick tick-r" aria-hidden="true"></span>
+        <div class="eyebrow"><p data-jp="レビュー">03 / Отзывы</p><p class="eyebrow-r">Люди о моей работе</p></div>
+        <div class="sec-head">
+          <h2 data-reveal>Говорят <em>клиенты</em><b class="dot">.</b></h2>
+        </div>
+        <div class="grid grid-2" data-reveal-group>
+          <article class="quote" data-reveal>
+            <div class="card-hud"><span>Выпускной</span><span>01</span></div>
+            <blockquote>Хотим поблагодарить за съёмку подарка от родителей и выпускного вечера. Было приятно видеть внимательное отношение к каждому моменту. Порадовало, как передана атмосфера вечера и эмоции детей и родителей. Всё получилось искренне, без наигранности. Результат превзошёл ожидания — теперь у нас остались ценные воспоминания об одном из самых важных школьных событий.</blockquote>
+            <div class="who"><img src="img/review-natalia.jpeg" alt="" loading="lazy"><p><b>Наталья</b><span>Мама выпускницы 11 класса</span></p></div>
+          </article>
+          <article class="quote" data-reveal>
+            <div class="card-hud"><span>Выпускной</span><span>02</span></div>
+            <blockquote>Мы заказывали видеопоздравления для выпускников и остались очень довольны результатом. Понравились идеи, подход к работе и терпение в процессе подготовки. Это, на мой взгляд, важный показатель профессионализма. Работать было комфортно и приятно, у родителей осталось много позитивных впечатлений. Желаем дальнейшего развития и творческих успехов.</blockquote>
+            <div class="who"><img src="img/review-ekaterina.jpeg" alt="" loading="lazy"><p><b>Екатерина</b><span>Мама выпускника 11А класса</span></p></div>
+          </article>
+          <article class="quote" data-reveal>
+            <div class="card-hud"><span>День рождения</span><span>03</span></div>
+            <blockquote>Если вы хотите сделать по-настоящему запоминающийся подарок родным, себе или близким, который останется в памяти и в сердце, вам точно сюда. Мы делали клип ко дню рождения мамы. Цветы были бы как у всех, тем более она педагог, а значит их и так море. Захотелось подарить нечто большее — историю. Идея была простой и сильной: пролистать её жизнь. В результате клип получился в самое сердце. Чёрно-белые фотографии стали цветными, живыми, и каждая — на своём месте. Огромная благодарность за работу. Настоящий профессионал своего дела.</blockquote>
+            <div class="who"><img src="img/alena.jpg" alt="" loading="lazy"><p><b>Алена</b><span>Дочь именинницы</span></p></div>
+          </article>
+          <article class="quote" data-reveal>
+            <div class="card-hud"><span>Юбилей</span><span>04</span></div>
+            <blockquote>Заказывал музыкальное видео-поздравление для своего друга детства к юбилею. Мы записали песню, сняли исполнение на сцене и собрали всё в одно видео с оживлением архивных фотографий. В итоге получился подарок, который тронул не только именинника, но и всех, кто его видел.</blockquote>
+            <div class="who"><img src="img/GRIG.jpeg" alt="" loading="lazy"><p><b>Андрей</b><span>Друг юбиляра</span></p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="sec sec-cta" id="contact" data-section="Связь">
+      <span class="rule" aria-hidden="true"></span>
+      <div class="frame">
+        <span class="tick tick-l" aria-hidden="true"></span><span class="tick tick-r" aria-hidden="true"></span>
+        <div class="cta" data-reveal-group>
+          <p class="cta-k" data-reveal>Опишите задачу</p>
+          <h2 data-reveal>Обсудим <em>проект</em><b class="dot">.</b></h2>
+          <div class="hero-btns" data-reveal>
+            <a class="btn btn-wa" href="https://wa.me/message/Z5HW2YEI3LFNE1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg> WhatsApp</a>
+            <a class="btn btn-red" href="https://t.me/PUDiN_media" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1-1 .2-1.5L20.6 2.7c.9-.3 1.6.2 1.3 1.6Z"/></svg> Telegram</a>
+            <a class="btn btn-vk" href="https://vk.ru/pudinmedia" target="_blank" rel="noopener"><b class="vk-mark">VK</b> ВКонтакте</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="frame foot-grid">
+      <div class="foot-brand">
+        <span class="logo-word logo-lg">PUD<span class="logo-i">ı<i></i></span>N</span>
+        <span class="barcode" aria-hidden="true"></span>
+        <p>Музыка, видео и анимация из одних рук. Невельск.</p>
+        <p class="foot-mono">Виталий Пудин</p>
+      </div>
+      <div class="foot-col">
+        <p class="foot-h">Работы</p>
+        <a href="#works-music">Музыка</a><a href="#works-video">Видео</a><a href="#works-animation">Анимация</a>
+      </div>
+      <div class="foot-col">
+        <p class="foot-h">Сайт</p>
+        <a href="#about">Обо мне</a><a href="#reviews">Отзывы</a><a href="#contact">Связь</a>
+      </div>
+      <div class="foot-col">
+        <p class="foot-h">Контакты</p>
+        <a href="https://wa.me/message/Z5HW2YEI3LFNE1" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://t.me/PUDiN_media" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://vk.ru/pudinmedia" target="_blank" rel="noopener">ВКонтакте</a>
+      </div>
+    </div>
+    <div class="frame foot-bar"><span>© 2026 PUDiN</span><span>От идеи до финала</span></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="pudin.js?v=17" defer></script>
+</body>
+</html>
